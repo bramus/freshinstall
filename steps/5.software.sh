@@ -393,7 +393,7 @@ echo ""
 
 echo "- Little Snitch"
 echo ""
-echo "    Run “brew cask install little-snitch” manually (requires restart)"
+echo "    Download from https://www.obdev.at/products/littlesnitch/index.html"
 echo ""
 
 echo "- NZBDrop"
