@@ -63,11 +63,6 @@ echo 'alias git-ftp="python ~/Library/git-ftp.py"' >> ~/.bash_profile
 
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
 
-# @TODO: Check if these are added to ~/.bash_profile. If not, add it yourself
-# # NVM
-# export NVM_DIR="$HOME/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-
 source ~/.bash_profile
 
 nvm install 7
