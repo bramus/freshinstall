@@ -183,8 +183,9 @@ echo -e "\n\033[93mYou'll need to import the Viscosity configs manually. I've do
 npm install -g react-native-cli
 
 brew install yarn --without-node
-# @TODO Check if this got added to ~/.bash_profile
-# export PATH="$HOME/.yarn/bin:$PATH"
+echo "# Yarn" >> ~/.bash_profile
+echo 'export PATH="$HOME/.yarn/bin:$PATH"' >> ~/.bash_profile
+source ~/.bash_profile
 
 brew install watchman
 brew cask install react-native-debugger
