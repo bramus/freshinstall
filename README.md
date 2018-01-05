@@ -1,3 +1,17 @@
+```
+###############################################################################################################################################
+#                                                                                                                                             #
+#   :::::::::: :::::::::  ::::::::::  ::::::::  :::    ::: ::::::::::: ::::    :::  ::::::::  :::::::::::     :::     :::        :::          #
+#   :+:        :+:    :+: :+:        :+:    :+: :+:    :+:     :+:     :+:+:   :+: :+:    :+:     :+:       :+: :+:   :+:        :+:          #
+#   +:+        +:+    +:+ +:+        +:+        +:+    +:+     +:+     :+:+:+  +:+ +:+            +:+      +:+   +:+  +:+        +:+          #
+#   :#::+::#   +#++:++#:  +#++:++#   +#++:++#++ +#++:++#++     +#+     +#+ +:+ +#+ +#++:++#++     +#+     +#++:++#++: +#+        +#+          #
+#   +#+        +#+    +#+ +#+               +#+ +#+    +#+     +#+     +#+  +#+#+#        +#+     +#+     +#+     +#+ +#+        +#+          #
+#   #+#        #+#    #+# #+#        #+#    #+# #+#    #+#     #+#     #+#   #+#+# #+#    #+#     #+#     #+#     #+# #+#        #+#          #
+#   ###        ###    ### ##########  ########  ###    ### ########### ###    ####  ########      ###     ###     ### ########## ##########   #
+#                                                                                                                                             #
+###############################################################################################################################################
+```
+
 # So you want to set up a new Mac aye?
 
 Good, `./freshinstall` will help you out with that.
@@ -29,10 +43,6 @@ With successive runs, `./freshinstall` will pick up where it left. If you do wan
 1. macOS Defaults **(reboot required)**
 
 	This step will set some (opinionated) macOS defaults.
-
-	Known issues:
-
-	- Desktop: Wallpaper set but not working (?!)
 
 2. SSH Configuration
 
@@ -69,3 +79,7 @@ With successive runs, `./freshinstall` will pick up where it left. If you do wan
 - https://superuser.com/a/1123198
 - https://github.com/joeyhoer/starter/blob/master/apps/sublime-text.sh
 - https://gist.github.com/agrcrobles/165ac477a9ee51198f4a870c723cd441
+
+## License
+
+The MIT License (MIT). Please see [License File](LICENSE) for more information.
