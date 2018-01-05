@@ -221,9 +221,9 @@ qlmanage -m
 curl -s https://getcomposer.org/installer | php
 sudo mv composer.phar /usr/local/bin/composer
 
-# @TODO: Check if these are added to ~/.bash_profile. If not, add it yourself
-# # Global composer binaries
-# export PATH=$HOME/.composer/vendor/bin:$PATH
+echo "# Composer" >> ~/.bash_profile
+echo 'export PATH="$HOME/.composer/vendor/bin:$PATH"' >> ~/.bash_profile
+source ~/.bash_profile
 
 # Mamp
 brew cask install mamp
