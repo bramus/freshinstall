@@ -132,6 +132,7 @@ if [ "$AppleID" != "" ]; then
 	mas install 404167149 # IP Scanner
 	mas install 402397683 # MindNode Lite
 	mas install 578078659 # ScreenSharingMenulet
+	mas install 803453959 # Slack
 
 fi;
 
@@ -307,7 +308,6 @@ brew cask install lastfm
 
 brew cask install charles
 
-brew cask install slack
 brew cask install hipchat
 
 brew cask install tower
