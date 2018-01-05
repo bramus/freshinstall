@@ -19,12 +19,26 @@ fi;
 
 brew cask install sublime-text
 
+# Make sure directories exists
+if [ ! -d "~/Library/Application Support/Sublime Text 3" ]; then
+	mkdir ~/Library/Application\ Support/Sublime\ Text\ 3
+fi;
+if [ ! -d "~/Library/Application Support/Sublime Text 3/Installed Packages" ]; then
+	mkdir ~/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages
+fi;
+if [ ! -d "~/Library/Application Support/Sublime Text 3/Packages" ]; then
+	mkdir ~/Library/Application\ Support/Sublime\ Text\ 3/Packages
+fi;
+if [ ! -d "~/Library/Application Support/Sublime Text 3/Packages/User" ]; then
+	mkdir ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
+fi;
+
 # Install Pacakge Control
 # @ref https://github.com/joeyhoer/starter/blob/master/apps/sublime-text.sh
 cd ~/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages && { curl -sLO https://packagecontrol.io/Package\ Control.sublime-package ; cd -; }
 
 # Install Plugins and Config
-cp -r ./resources/apps/sublime-text/* ~/Library/Application\ Support/Sublime\ Text*/Packages/User/ 2>/dev/null
+cp -r ./resources/apps/sublime-text/* ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/ 2>/dev/null
 
 
 ###############################################################################
