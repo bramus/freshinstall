@@ -25,7 +25,9 @@ else
 	xcode_installed="no"
 	xcode_ok="no"
 fi;
-if [ "$(xcode-select -p 2>&1)" != "/Applications/Xcode.app/Contents/Developer" ]; then
+
+# @ref https://github.com/Homebrew/install/blob/master/install#L110
+if [ ! -f "/Library/Developer/CommandLineTools/usr/bin/git" ] || [ ! -f "/usr/include/iconv.h" ]; then
 	xcodetools_installed="no"
 	xcode_ok="no"
 else
