@@ -173,7 +173,7 @@ brew install youtube-dl
 brew cask install viscosity
 curl -s -o ~/Downloads/uns_configs.zip -L https://usenetserver.com/vpn/software/uns_configs.zip > /dev/null
 
-echo -e "\n\033[93mYou'll need to import the Viscosity configs manually. I've downloadeded them to “~/Downloads/uns_configs.zip” for you …\033[0m"
+echo -e "\n\033[93mYou'll need to import the Viscosity configs manually. I've downloadeded them to “~/Downloads/uns_configs.zip” for you …\033[0m\n"
 
 
 ###############################################################################
@@ -376,6 +376,7 @@ echo "- Additional Tools for Xcode"
 echo ""
 echo "    Download from https://developer.apple.com/download/more/"
 echo "    Mount the .dmg + install it from the Graphics subfolder"
+echo ""
 
 echo "- Little Snitch"
 echo ""
@@ -385,3 +386,4 @@ echo ""
 echo "- NZBDrop"
 echo ""
 echo "    Download from http://www.asar.com/nzbdrop.html"
+echo ""
