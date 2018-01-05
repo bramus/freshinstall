@@ -346,7 +346,11 @@ sdkmanager "platform-tools" "platforms;android-23"
 sdkmanager "build-tools;23.0.1"
 
 # HAXM
-brew cask install intel-haxm
+if [ $(sw_vers -productVersion | cut -d. -f2) -lt 13 ]; then
+	brew cask install intel-haxm
+else
+	echo -e "\n\033[93mCould not install intel-haxm on this OS. It's not supported (yet)\033[0m\n"
+fi;
 
 # ENV Variables
 echo "export ANT_HOME=/usr/local/opt/ant" >> ~/.bash_profile
