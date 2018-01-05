@@ -55,24 +55,19 @@ if [ "$xcode_ok" == "no" ]; then
 		exit
 	else
 		if [ "$xcodetools_installed" == "no" ]; then
-			echo -e "\nInstalling Xcode Command Line Tools …"
-			# echo "Please install them by running 'xcode-select --install'"
+			echo -e "\Launching installer for Xcode Command Line Tools …"
 
 			xcode-select --install &>/dev/null
 
-			# Wait until the Xcode Command Line Tools are installed
-			# until $(xcode-select -p &>/dev/null); do
-			until [ $(xcode-select -p 2>&1 | grep "unable to get active developer directory") == "" ]; do
-				sleep 5
-			done
+			echo -e "\nPress any key when the installer has finished."
+			read -n 1
+
 		fi;
 	fi;
 fi;
 
 # Accept the Xcode/iOS license agreement
-if ! $(sudo xcodebuild -license status); then
-	sudo xcodebuild -license accept
-fi
+sudo xcodebuild -license accept
 
 ###############################################################################
 # HOMEBREW                                                                    #
