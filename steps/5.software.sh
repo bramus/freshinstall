@@ -334,6 +334,7 @@ brew cask install colorpicker-skalacolor
 # @ref https://gist.github.com/agrcrobles/165ac477a9ee51198f4a870c723cd441
 
 # Android Dev Tools
+brew cask install caskroom/versions/java8
 brew install ant
 brew install maven
 brew install gradle
