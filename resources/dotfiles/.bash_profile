@@ -32,8 +32,8 @@ function _makefile_targets {
 }
 complete -F _makefile_targets make
 
-# color my `ls`
-alias lsa="ls -alG"
+# ls
+alias la="ls -alG"
 
 # IP addres aliases
 alias publicip="dig +short myip.opendns.com @resolver1.opendns.com"
