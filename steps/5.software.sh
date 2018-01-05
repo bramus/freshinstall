@@ -294,7 +294,7 @@ brew install jq
 brew cask install 1password
 
 brew cask install caffeine
-brew cask install nosleep
+# brew cask install nosleep
 
 brew cask install day-o
 brew cask install deltawalker
