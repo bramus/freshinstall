@@ -367,6 +367,8 @@ echo "export PATH=$ANDROID_HOME/tools:$PATH" >> ~/.bash_profile
 echo "export PATH=$ANDROID_HOME/platform-tools:$PATH" >> ~/.bash_profile
 echo "export PATH=$ANDROID_HOME/build-tools/23.0.1:$PATH" >> ~/.bash_profile
 
+source ~/.bash_profile
+
 # @TODO: Configure Emulator?!
 
 ###############################################################################
