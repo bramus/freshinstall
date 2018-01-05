@@ -3,6 +3,9 @@ source ~/.profile
 # color my prompt!
 source ~/.bash_prompt
 
+# Load in .bashrc
+source ~/.bashrc
+
 # autocomplete git branches
 # @ref https://raw.github.com/git/git/master/contrib/completion/git-completion.bash
 source ~/.git-completion.sh
