@@ -69,6 +69,9 @@ fi;
 # Accept the Xcode/iOS license agreement
 sudo xcodebuild -license accept
 
+# Enable Developer Mode
+DevToolsSecurity -enable 2>&1 > /dev/null
+
 ###############################################################################
 # HOMEBREW                                                                    #
 ###############################################################################
