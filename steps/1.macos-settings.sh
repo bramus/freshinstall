@@ -160,7 +160,9 @@ defaults write NSGlobalDomain AppleShowScrollBars -string "WhenScrolling"
 defaults write com.apple.systemuiserver menuExtras -array \
 	"/System/Library/CoreServices/Menu Extras/Bluetooth.menu" \
 	"/System/Library/CoreServices/Menu Extras/AirPort.menu" \
-	"/System/Library/CoreServices/Menu Extras/Battery.menu"
+	"/System/Library/CoreServices/Menu Extras/Battery.menu" \
+	"/System/Library/CoreServices/Menu Extras/Displays.menu" \
+	"/System/Library/CoreServices/Menu Extras/Volume.menu"
 
 # Show battery percentage
 defaults write com.apple.menuextra.battery ShowPercent -bool true
