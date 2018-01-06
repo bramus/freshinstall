@@ -155,6 +155,7 @@ brew cask install firefox
 brew cask install firefoxdeveloperedition
 brew cask install google-chrome
 brew cask install google-chrome-canary
+brew cask install safari-technology-preview
 
 
 ###############################################################################
