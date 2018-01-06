@@ -40,6 +40,21 @@ cd ~/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages && { curl
 # Install Plugins and Config
 cp -r ./resources/apps/sublime-text/* ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/ 2>/dev/null
 
+# Open files by default with sublime using duti
+#
+# Note that duti is preferred over the command below, as that on requires a reboot
+# 	defaults write com.apple.LaunchServices LSHandlers -array-add '{"LSHandlerContentType" = "public.plain-text"; "LSHandlerPreferredVersions" = { "LSHandlerRoleAll" = "-"; }; LSHandlerRoleAll = "com.sublimetext.3";}'
+#
+# Some pointers:
+# - To get identifier of Sublime: /usr/libexec/PlistBuddy -c 'Print CFBundleIdentifier' /Applications/Sublime\ Text.app/Contents/Info.plist
+# - To get UTI of a file: mdls -name kMDItemContentTypeTree /path/to/file.ext
+#
+brew install duti
+duti -s com.sublimetext.3 public.data all # for files like ~/.bash_profile
+duti -s com.sublimetext.3 public.plain-text all
+duti -s com.sublimetext.3 public.script all
+duti -s com.sublimetext.3 net.daringfireball.markdown all
+
 
 ###############################################################################
 # vim                                                                         #
