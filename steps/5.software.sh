@@ -62,7 +62,6 @@ echo 'alias git-ftp="python ~/Library/git-ftp.py"' >> ~/.bash_profile
 ###############################################################################
 
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
-
 source ~/.bash_profile
 
 nvm install 7
@@ -86,12 +85,6 @@ fi;
 ###############################################################################
 
 curl -sSL https://get.rvm.io | bash -s stable --ruby
-
-# @TODO: Check if these are added to ~/.profile. If not, add it yourself.
-# # RVM
-# [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-# export PATH="$PATH:$HOME/.rvm/bin"
-
 source ~/.profile
 
 
@@ -231,8 +224,6 @@ source ~/.bash_profile
 # Mamp
 brew cask install mamp
 # + Open it, Choose PHP Version, and check "Make this version available on the CLI" which will update `~/.profile`
-
-# @TODO: Check if these are added to ~/.bash_profile. If not, add it yourself
 
 
 

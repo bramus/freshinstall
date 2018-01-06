@@ -139,7 +139,6 @@ echo -e "- General UI/UX …"
 defaults write com.apple.universalaccess reduceTransparency -bool true
 
 # Set Wallpaper
-# @TODO: This ain't working properly?
 yes | (cp -i ./resources/wallpaper.jpg ~/wallpaper.jpg > /dev/null 2>&1)
 sqlite3 ~/Library/Application\ Support/Dock/desktoppicture.db "INSERT OR REPLACE INTO data VALUES ('~/wallaper.jpg');"
 

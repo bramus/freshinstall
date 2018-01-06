@@ -108,7 +108,6 @@ else
 fi;
 
 # Brew Cask FTW!
-# @TODO: One of the commands below still spits out an "Updating Homebrew" message …
 echo -ne "  - Brew Cask                "
 brew tap caskroom/cask 2>&1 > /dev/null
 brew tap caskroom/versions 2>&1 > /dev/null
