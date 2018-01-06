@@ -267,6 +267,12 @@ defaults write com.apple.AppleMultitouchTrackpad TrackpadRightClick -bool true
 defaults -currentHost write NSGlobalDomain com.apple.trackpad.enableSecondaryClick -bool true
 defaults write com.apple.AppleMultitouchTrackpad TrackpadRightClick -bool true
 
+# Enable extra multifinger gestures (such as three finger swipe down = app expose)
+defaults write com.apple.dock showMissionControlGestureEnabled -bool true
+defaults write com.apple.dock showAppExposeGestureEnabled -bool true
+defaults write com.apple.dock showDesktopGestureEnabled -bool true
+defaults write com.apple.dock showLaunchpadGestureEnabled -bool true
+
 # @TOCHECK https://github.com/hjuutilainen/dotfiles/blob/master/bin/osx-user-defaults.sh
 
 # Two button mouse mode
