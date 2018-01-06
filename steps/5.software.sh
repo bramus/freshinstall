@@ -199,6 +199,13 @@ echo 'export PATH="$HOME/.yarn/bin:$PATH"' >> ~/.bash_profile
 source ~/.bash_profile
 
 brew install watchman
+# Watchman needs permissions on ~/Library/LaunchAgents
+if [ ! -d "~/Library/LaunchAgents" ]; then
+	sudo chown -R $(whoami):staff ~/Library/LaunchAgents
+else
+	mkdir ~/Library/LaunchAgents
+fi;
+
 brew cask install react-native-debugger
 
 
