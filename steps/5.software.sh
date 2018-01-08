@@ -247,6 +247,8 @@ source ~/.bash_profile
 brew cask install mamp
 # + Open it, Choose PHP Version, and check "Make this version available on the CLI" which will update `~/.profile`
 
+echo "# MySQL (MAMP)" >> ~/.bash_profile
+echo "alias mysql=/Applications/MAMP/Library/bin/mysql" >> ~/.bash_profile
 
 
 ###############################################################################
