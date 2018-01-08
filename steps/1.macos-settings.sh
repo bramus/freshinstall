@@ -16,7 +16,7 @@
 starting_script=`basename "$0"`
 if [ "$starting_script" != "freshinstall.sh" ]; then
 	echo -e "\n\033[31m\aUhoh!\033[0m This script is part of freshinstall and should not be ran by itself."
-	echo -e "Please launch freshinstall itself using \033[1msudo ./freshinstall.sh\033[0m"
+	echo -e "Please launch freshinstall itself using \033[1m./freshinstall.sh\033[0m"
 	echo -e "\n\033[93mMy journey stops here (for now) … bye! 👋\033[0m\n"
 	exit 1
 fi;
