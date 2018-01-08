@@ -226,8 +226,7 @@ defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 echo -e "- MacBookPro Touch Bar …"
 
 # Always display full control strip (ignoring App Controls)
-# defaults write com.apple.touchbar.agent PresentationModeGlobal fullControlStrip
-
+defaults write com.apple.touchbar.agent PresentationModeGlobal fullControlStrip
 
 ###############################################################################
 # SSD-specific tweaks                                                         #
@@ -816,6 +815,7 @@ echo -e "- Messages …"
 
 # @note: no terminal, as it will ask for a reboot after this step …
 
+pkill "Touch Bar agent";
 for app in "Activity Monitor" \
 	"Address Book" \
 	"cfprefsd" \
@@ -824,6 +824,7 @@ for app in "Activity Monitor" \
 	"Messages" \
 	"Photos" \
 	"Safari" \
+	"ControlStrip" \
 	"SystemUIServer"; do
 	killall "${app}" &> /dev/null
 done
