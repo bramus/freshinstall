@@ -69,7 +69,7 @@ cp ./resources/apps/vim/.vimrc ~/.vimrc
 
 cp ./resources/apps/git-ftp/git-ftp.py ~/git-ftp.py
 echo '# git-ftp' >> ~/.bash_profile
-echo 'alias git-ftp="python ~/Library/git-ftp.py"' >> ~/.bash_profile
+echo 'alias git-ftp="python ~/git-ftp.py"' >> ~/.bash_profile
 
 
 ###############################################################################
