@@ -20,7 +20,7 @@ Good, `./freshinstall` will help you out with that.
 
 - Open Terminal
 
-- Maxmize the window for a best effect
+- Maximize the window for a best effect
 
 - Enter these commands
 
