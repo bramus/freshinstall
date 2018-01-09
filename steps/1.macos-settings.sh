@@ -1,14 +1,5 @@
 #!/usr/bin/env bash
 
-# ~/.macos defaults
-
-# Inspired upon:
-# - https://mths.be/macos by Mathias Bynens
-# - https://github.com/paulirish/dotfiles/blob/master/.osx
-# - https://github.com/herrbischoff/awesome-osx-command-line
-# - https://github.com/hjuutilainen/dotfiles/tree/master/bin
-
-
 ###############################################################################
 # PREVENT PEOPLE FROM SHOOITNG THEMSELVES IN THE FOOT                         #
 ###############################################################################
