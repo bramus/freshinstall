@@ -67,6 +67,10 @@ cp ./resources/apps/vim/.vimrc ~/.vimrc
 # git-ftp (for older projects)                                                #
 ###############################################################################
 
+sudo chown -R $(whoami):staff /Library/Python/2.7
+curl https://bootstrap.pypa.io/get-pip.py | python
+pip install gitpython
+
 cp ./resources/apps/git-ftp/git-ftp.py ~/git-ftp.py
 echo '# git-ftp' >> ~/.bash_profile
 echo 'alias git-ftp="python ~/git-ftp.py"' >> ~/.bash_profile
