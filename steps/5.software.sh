@@ -335,8 +335,6 @@ brew cask install tower
 brew cask install dropbox
 brew cask install transmit4
 
-# Locking down to this version (no serial for later version)
-brew cask install https://raw.githubusercontent.com/caskroom/homebrew-cask/a56c5894cc61d2bf182b7608e94128065af3e64f/Casks/vmware-fusion.rb
 brew cask install handbrake
 brew cask install hyperdock
 
@@ -355,6 +353,14 @@ brew cask install postman
 
 # Locking down to this version (no serial for later version)
 brew cask install https://raw.githubusercontent.com/grettir/homebrew-cask/36b240eeec68e993a928395d3afdcef1e32eb592/Casks/screenflow.rb
+
+###############################################################################
+# Virtual Machines and stuff                                                  #
+###############################################################################
+
+# Locking down to this version (no serial for later version)
+brew cask install https://raw.githubusercontent.com/caskroom/homebrew-cask/a56c5894cc61d2bf182b7608e94128065af3e64f/Casks/vmware-fusion.rb
+brew cask install docker
 
 ###############################################################################
 # Android Studio                                                              #
