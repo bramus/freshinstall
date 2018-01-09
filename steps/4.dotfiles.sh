@@ -37,6 +37,11 @@ if [[ "$DOIT" == "yes" ]]; then
 	echo -ne "\n- Copying dotfiles to their destination: "
 	cp -R ./resources/dotfiles/ ~/
 	echo -e "\033[32mDone\033[0m"
+
+	echo -ne "\n- Loading the global .gitignore: "
+	git config --global core.excludesfile ~/.gitignore
+	echo -e "\033[32mDone\033[0m"
+
 	echo -e "\n\033[93mGreat, the dotfiles have been put in place!\033[0m"
 else
 	echo -e "\n\033[93mAllrighty, I'll skip this step 😉\033[0m"
