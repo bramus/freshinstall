@@ -146,6 +146,7 @@ if [ "$AppleID" != "" ]; then
 	mas install 402397683 # MindNode Lite
 	mas install 578078659 # ScreenSharingMenulet
 	mas install 803453959 # Slack
+	mas install 1006739057 # NepTunes (Last.fm Scrobbling)
 
 fi;
 
@@ -327,7 +328,6 @@ brew cask install macpar-deluxe
 
 brew cask install vlc
 # brew cask install plex-media-server
-brew cask install lastfm
 
 brew cask install charles
 
