@@ -212,6 +212,8 @@ fi;
 
 brew cask install react-native-debugger
 
+gem install xcpretty
+
 
 ###############################################################################
 # QUICK LOOK PLUGINS                                                          #
