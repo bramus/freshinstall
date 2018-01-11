@@ -352,6 +352,7 @@ brew cask install hyperdock
 brew install mkvtoolnix
 brew cask install makemkv
 brew cask install jubler
+brew cask install flixtools
 
 brew cask install the-archive-browser
 brew cask install imagealpha
