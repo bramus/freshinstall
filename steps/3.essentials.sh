@@ -73,6 +73,14 @@ sudo xcodebuild -license accept
 DevToolsSecurity -enable 2>&1 > /dev/null
 
 ###############################################################################
+# XCODE: Configure Xcode/ Simulator                                           #
+###############################################################################
+
+# Don't show device bezels
+defaults write com.apple.iphonesimulator ShowChrome -bool FALSE
+
+
+###############################################################################
 # HOMEBREW                                                                    #
 ###############################################################################
 
