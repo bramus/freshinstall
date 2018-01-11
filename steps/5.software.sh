@@ -335,6 +335,7 @@ brew cask install deltawalker
 brew cask install macpar-deluxe
 
 brew cask install vlc
+duti -s org.videolan.vlc public.avi all
 # brew cask install plex-media-server
 
 brew cask install charles
