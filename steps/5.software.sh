@@ -213,7 +213,7 @@ fi;
 
 brew cask install react-native-debugger
 
-brew install libimobiledevice
+brew install --HEAD libimobiledevice
 gem install xcpretty
 
 
