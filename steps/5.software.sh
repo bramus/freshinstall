@@ -432,14 +432,18 @@ brew cask install android-studio
 # @ref https://gist.github.com/Tanapruk/b05e97d68a5969b4402650094145e913
 # @ref https://wiki.genexus.com/commwiki/servlet/wiki?14462,Creating+an+Android+Virtual+Device,
 # @ref https://gist.github.com/handstandsam/f20c2fd454d3e3948f428f62d73085df
-echo no | avdmanager create avd --name "Nexus_5X_API_25" --abi "google_apis/x86_64" --package "system-images;android-25;google_apis;x86_64" --device "Nexus 5"
+echo no | avdmanager create avd --name "Nexus_5X_API_25" --abi "google_apis/x86_64" --package "system-images;android-25;google_apis;x86_64" --device "Nexus 5" --sdcard 128M
 
-echo "vm.heapSize=128
-hw.ramSize=1024
-disk.dataPartition.size=4096MB
+echo "vm.heapSize=256
+hw.ramSize=1536
+disk.dataPartition.size=2048MB
 hw.gpu.enabled=yes
 hw.gpu.mode=auto
-hw.keyboard=yes" >> ~/.android/avd/Nexus_5X_API_25.avd/config.ini
+hw.keyboard=yes
+showDeviceFrame=yes
+skin.dynamic=yes
+skin.name=nexus_5x
+skin.path=$HOME/Library/Android/sdk/skins/nexus_5x" >> ~/.android/avd/Nexus_5X_API_25.avd/config.ini
 
 # Start it via `emulator -avd Nexus_5X_API_25`
 # Beware of the QT error though, @see https://www.bram.us/2017/05/12/launching-the-android-emulator-from-the-command-line/
