@@ -141,11 +141,11 @@ defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 1
 defaults write NSGlobalDomain AppleShowScrollBars -string "WhenScrolling"
 
 # Menu bar: hide the Clock (we'll use Day-O later on), and User icons
-# for domain in ~/Library/Preferences/ByHost/com.apple.systemuiserver.*; do
-# 	defaults write "${domain}" dontAutoLoad -array \
-# 		"/System/Library/CoreServices/Menu Extras/Clock.menu" \
-# 		"/System/Library/CoreServices/Menu Extras/User.menu"
-# done
+for domain in ~/Library/Preferences/ByHost/com.apple.systemuiserver.*; do
+	defaults write "${domain}" dontAutoLoad -array \
+		"/System/Library/CoreServices/Menu Extras/Clock.menu" \
+		"/System/Library/CoreServices/Menu Extras/User.menu"
+done
 
 # Menu bar: Add Bluetooth, AirPort (WiFi), Battery
 defaults write com.apple.systemuiserver menuExtras -array \
