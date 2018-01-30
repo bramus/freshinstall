@@ -33,7 +33,7 @@ if [ ! -d "~/Library/Application Support/Sublime Text 3/Packages/User" ]; then
 	mkdir ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
 fi;
 
-# Install Pacakge Control
+# Install Package Control
 # @ref https://github.com/joeyhoer/starter/blob/master/apps/sublime-text.sh
 cd ~/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages && { curl -sLO https://packagecontrol.io/Package\ Control.sublime-package ; cd -; }
 
