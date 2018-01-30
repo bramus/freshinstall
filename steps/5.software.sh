@@ -322,6 +322,8 @@ defaults write org.m0k.transmission UploadLimit -int 5
 # OTHER BREW/CASK THINGS                                                      #
 ###############################################################################
 
+brew install tig
+
 brew install speedtest-cli
 brew install jq
 
