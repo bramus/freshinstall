@@ -393,7 +393,7 @@ brew cask install android-sdk
 brew cask install android-ndk
 
 # SDK Components
-sdkmanager "platform-tools" "platforms;android-25" "extras;intel;Hardware_Accelerated_Execution_Manager" "build-tools;25.0.3" "system-images;android-25;google_apis;x86" "emulator"
+sdkmanager "platform-tools" "platforms;android-25" "extras;intel;Hardware_Accelerated_Execution_Manager" "build-tools;25.0.3" "system-images;android-25;google_apis;x86_64" "emulator"
 # echo y | …
 
 # HAXM
@@ -426,7 +426,15 @@ brew cask install android-studio
 # Configure Emulator
 # @ref https://gist.github.com/Tanapruk/b05e97d68a5969b4402650094145e913
 # @ref https://wiki.genexus.com/commwiki/servlet/wiki?14462,Creating+an+Android+Virtual+Device,
-echo no | avdmanager create avd --name "Nexus_5X_API_25" --abi "google_apis/x86" --package "system-images;android-25;google_apis;x86" --device "Nexus 5"
+# @ref https://gist.github.com/handstandsam/f20c2fd454d3e3948f428f62d73085df
+echo no | avdmanager create avd --name "Nexus_5X_API_25" --abi "google_apis/x86_64" --package "system-images;android-25;google_apis;x86_64" --device "Nexus 5"
+
+echo "vm.heapSize=128
+hw.ramSize=1024
+disk.dataPartition.size=4096MB
+hw.gpu.enabled=yes
+hw.gpu.mode=auto
+hw.keyboard=yes" >> ~/.android/avd/Nexus_5X_API_25.avd/config.ini
 
 # Start it via `emulator -avd Nexus_5X_API_25`
 # Beware of the QT error though, @see https://www.bram.us/2017/05/12/launching-the-android-emulator-from-the-command-line/
