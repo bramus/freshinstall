@@ -326,6 +326,7 @@ brew install speedtest-cli
 brew install jq
 
 brew cask install 1password
+brew cask install macpass
 
 brew cask install caffeine
 # brew cask install nosleep
