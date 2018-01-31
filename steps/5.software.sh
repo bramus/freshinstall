@@ -422,6 +422,8 @@ echo 'export PATH="$GRADLE_HOME/bin:$PATH"' >> ~/.bash_profile
 echo 'export PATH="$ANDROID_HOME/tools:$PATH"' >> ~/.bash_profile
 echo 'export PATH="$ANDROID_HOME/platform-tools:$PATH"' >> ~/.bash_profile
 echo 'export PATH="$ANDROID_HOME/build-tools/25.0.3:$PATH"' >> ~/.bash_profile
+# @ref https://www.bram.us/2017/05/12/launching-the-android-emulator-from-the-command-line/
+echo 'export PATH="$ANDROID_HOME/emulator:$PATH"' >> ~/.bash_profile
 
 source ~/.bash_profile
 
@@ -446,7 +448,6 @@ skin.name=nexus_5x
 skin.path=$HOME/Library/Android/sdk/skins/nexus_5x" >> ~/.android/avd/Nexus_5X_API_25.avd/config.ini
 
 # Start it via `emulator -avd Nexus_5X_API_25`
-# Beware of the QT error though, @see https://www.bram.us/2017/05/12/launching-the-android-emulator-from-the-command-line/
 
 ###############################################################################
 # ALL DONE NOW!                                                               #
