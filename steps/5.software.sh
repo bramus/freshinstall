@@ -414,6 +414,8 @@ echo 'export ANT_HOME=/usr/local/opt/ant' >> ~/.bash_profile
 echo 'export MAVEN_HOME=/usr/local/opt/maven' >> ~/.bash_profile
 echo 'export GRADLE_HOME=/usr/local/opt/gradle' >> ~/.bash_profile
 echo 'export ANDROID_HOME=/usr/local/share/android-sdk' >> ~/.bash_profile
+echo 'export ANDROID_SDK_ROOT="$ANDROID_HOME"' >> ~/.bash_profile
+echo 'export ANDROID_AVD_HOME="$HOME/.android/avd"' >> ~/.bash_profile
 echo 'export ANDROID_NDK_HOME=/usr/local/share/android-ndk' >> ~/.bash_profile
 echo 'export INTEL_HAXM_HOME=/usr/local/Caskroom/intel-haxm' >> ~/.bash_profile
 
