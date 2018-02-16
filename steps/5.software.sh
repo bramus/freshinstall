@@ -399,7 +399,7 @@ brew cask install android-sdk
 brew cask install android-ndk
 
 # SDK Components
-sdkmanager "platform-tools" "platforms;android-25" "extras;intel;Hardware_Accelerated_Execution_Manager" "build-tools;25.0.3" "system-images;android-25;google_apis;x86_64" "emulator"
+sdkmanager "platform-tools" "platforms;android-25" "extras;intel;Hardware_Accelerated_Execution_Manager" "build-tools;25.0.3" "system-images;android-25;google_apis_playstore;x86" "emulator"
 # echo y | …
 
 # HAXM
@@ -435,7 +435,7 @@ brew cask install android-studio
 # @ref https://gist.github.com/Tanapruk/b05e97d68a5969b4402650094145e913
 # @ref https://wiki.genexus.com/commwiki/servlet/wiki?14462,Creating+an+Android+Virtual+Device,
 # @ref https://gist.github.com/handstandsam/f20c2fd454d3e3948f428f62d73085df
-echo no | avdmanager create avd --name "Nexus_5X_API_25" --abi "google_apis/x86_64" --package "system-images;android-25;google_apis;x86_64" --device "Nexus 5" --sdcard 128M
+echo no | avdmanager create avd --name "Nexus_5X_API_25" --abi "google_apis_playstore/x86" --package "system-images;android-25;google_apis_playstore;x86" --device "Nexus 5X" --sdcard 128M
 
 echo "vm.heapSize=256
 hw.ramSize=1536
