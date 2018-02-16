@@ -154,6 +154,7 @@ if [ "$AppleID" != "" ]; then
 	mas install 578078659 # ScreenSharingMenulet
 	mas install 803453959 # Slack
 	mas install 1006739057 # NepTunes (Last.fm Scrobbling)
+	mas install 955297617 # CodeRunner 2
 
 fi;
 
