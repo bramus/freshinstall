@@ -363,6 +363,7 @@ duti -s org.videolan.vlc public.avi all
 # brew cask install plex-media-server
 
 brew cask install charles
+brew cask install ngrok
 
 brew cask install hipchat
 
