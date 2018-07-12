@@ -155,6 +155,9 @@ if [ "$AppleID" != "" ]; then
 	mas install 803453959 # Slack
 	mas install 1006739057 # NepTunes (Last.fm Scrobbling)
 	mas install 955297617 # CodeRunner 2
+	mas install 1313773050 # Artstudio Pro
+	mas install 824171161 # Affinity Designer
+	mas install 824183456 # Affinity Photo
 
 fi;
 
