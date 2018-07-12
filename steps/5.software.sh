@@ -395,6 +395,7 @@ brew cask install postman
 brew cask install https://raw.githubusercontent.com/grettir/homebrew-cask/36b240eeec68e993a928395d3afdcef1e32eb592/Casks/screenflow.rb
 
 brew cask install subsurface
+brew cask install quik
 
 ###############################################################################
 # Virtual Machines and stuff                                                  #
