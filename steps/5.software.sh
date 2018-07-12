@@ -289,6 +289,12 @@ brew services restart mysql
 composer global require laravel/valet
 valet install
 
+# If you want PMA available over https://pma.test/, run this:
+# cd ~/repos/misc/
+# composer create-project phpmyadmin/phpmyadmin
+# cd ~/repos/misc/phpmyadmin
+# valet link pma
+# valet secure
 
 ###############################################################################
 # Transmission.app + Config                                                   #
