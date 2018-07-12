@@ -248,7 +248,7 @@ qlmanage -m
 
 
 ###############################################################################
-# Composer + MAMP                                                             #
+# Composer + MySQL + Valet                                                    #
 ###############################################################################
 
 # Composer
@@ -259,12 +259,32 @@ echo "# Composer" >> ~/.bash_profile
 echo 'export PATH="$HOME/.composer/vendor/bin:$PATH"' >> ~/.bash_profile
 source ~/.bash_profile
 
-# Mamp
-brew cask install mamp
-# + Open it, Choose PHP Version, and check "Make this version available on the CLI" which will update `~/.profile`
+# Newer PHP Versions
+brew install php
+brew install php@7.1
 
-echo "# MySQL (MAMP)" >> ~/.bash_profile
-echo "alias mysql=/Applications/MAMP/Library/bin/mysql" >> ~/.bash_profile
+brew services start php
+brew link php
+
+# MySQL
+brew install mysql
+brew services start mysql
+
+# Tweak MySQL
+mysqlpassword="root"
+echo -e "\n  What should the root password for MySQL be? (default: $mysqlpassword)"
+echo -ne "  > \033[34m\a"
+read
+echo -e "\033[0m\033[1A"
+[ -n "$REPLY" ] && mysqlpassword=$REPLY
+
+mysql -u root -e "ALTER USER root@localhost IDENTIFIED WITH mysql_native_password BY '$mysqlpassword'; FLUSH PRIVILEGES;"
+echo ./resources/apps/mysql/my.cnf > /usr/local/etc/my.cnf
+brew services restart mysql
+
+# Laravel Valet
+composer global require laravel/valet
+valet install
 
 
 ###############################################################################
