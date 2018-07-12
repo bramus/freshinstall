@@ -374,6 +374,7 @@ duti -s org.videolan.vlc public.avi all
 brew cask install charles
 brew cask install ngrok
 
+brew cask install slack
 brew cask install hipchat
 
 brew cask install tower
