@@ -282,7 +282,7 @@ echo -e "\033[0m\033[1A"
 [ -n "$REPLY" ] && mysqlpassword=$REPLY
 
 mysql -u root -e "ALTER USER root@localhost IDENTIFIED WITH mysql_native_password BY '$mysqlpassword'; FLUSH PRIVILEGES;"
-echo ./resources/apps/mysql/my.cnf > /usr/local/etc/my.cnf
+cat ./resources/apps/mysql/my.cnf > /usr/local/etc/my.cnf
 brew services restart mysql
 
 # Laravel Valet
