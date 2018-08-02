@@ -382,6 +382,7 @@ brew cask install dropbox
 brew cask install transmit4
 
 brew cask install handbrake
+brew cask install spectacle
 
 brew install mkvtoolnix
 brew cask install makemkv
