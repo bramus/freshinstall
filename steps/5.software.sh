@@ -382,6 +382,7 @@ brew cask install ngrok
 # Already installed through mas
 # brew cask install slack
 brew cask install hipchat
+brew cask install skype
 
 brew cask install tower
 brew cask install dropbox
