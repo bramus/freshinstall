@@ -123,7 +123,7 @@ echo -ne "  - Brew Cask                "
 brew tap caskroom/cask 2>&1 > /dev/null
 brew tap caskroom/versions 2>&1 > /dev/null
 
-if [ "$(brew cask --version 2>&1 | grep "Homebrew-Cask")" ]; then
+if [ "$(brew --version 2>&1 | grep "homebrew-cask")" ]; then
 	echo -e "\033[32mOK\033[0m"
 else
 	echo -e "\033[31mNOK\033[0m"
