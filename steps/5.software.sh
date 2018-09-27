@@ -269,6 +269,11 @@ brew install php@7.1
 brew services start php
 brew link php
 
+pecl install mcrypt-1.0.1 # mcrypt for PHP 7.2
+pecl install grpc # needed for google firestore et al
+
+# @note: You might wanna "sudo brew services restart php" after this
+
 # MySQL
 brew install mysql
 brew services start mysql
