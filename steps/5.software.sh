@@ -383,6 +383,7 @@ brew cask install ngrok
 # brew cask install slack
 brew cask install hipchat
 brew cask install skype
+brew cask install whatsapp
 
 brew cask install tower
 brew cask install dropbox
