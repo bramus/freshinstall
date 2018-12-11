@@ -1,11 +1,14 @@
 {
+	"color_scheme": "Packages/User/SublimeLinter/Monokai (SL).tmTheme",
 	"default_line_ending": "LF",
 	"font_size": 14,
+	"git_gutter_show_line_annotation": false,
 	"ignored_packages":
 	[
 		"CodeFormatter",
 		"Vintage"
 	],
+	"show_full_path": true,
 	"tab_size": 4,
 	"theme": "Default.sublime-theme",
 	"translate_tabs_to_spaces": false,

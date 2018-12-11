@@ -5,6 +5,7 @@
 	],
 	"installed_packages":
 	[
+		"ANSIescape",
 		"Babel",
 		"Babel Snippets",
 		"Better CoffeeScript",
@@ -18,7 +19,7 @@
 		"JsFormat",
 		"Markdown Extended",
 		"Markdown HTML Preview",
-		"Markdown Preview",
+		"MarkdownPreview",
 		"Monokai Extended",
 		"Package Control",
 		"PHP-Twig",
@@ -27,6 +28,7 @@
 		"Sublime Bookmarks",
 		"SublimeLinter",
 		"Swift",
+		"TodoReview",
 		"TrailingSpaces",
 		"TypeScript"
 	]
