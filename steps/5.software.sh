@@ -262,14 +262,15 @@ echo "# Composer" >> ~/.bash_profile
 echo 'export PATH="$HOME/.composer/vendor/bin:$PATH"' >> ~/.bash_profile
 source ~/.bash_profile
 
-# Newer PHP Versions
+# PHP Versions
 brew install php
+brew install php@7.2
 brew install php@7.1
 
 brew services start php
 brew link php
 
-pecl install mcrypt-1.0.1 # mcrypt for PHP 7.2
+pecl install mcrypt-1.0.1 # mcrypt for PHP > 7.1
 pecl install grpc # needed for google firestore et al
 
 # @note: You might wanna "sudo brew services restart php" after this
