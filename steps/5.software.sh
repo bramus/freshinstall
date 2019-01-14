@@ -158,6 +158,7 @@ if [ "$AppleID" != "" ]; then
 	mas install 1313773050 # Artstudio Pro
 	mas install 824171161 # Affinity Designer
 	mas install 824183456 # Affinity Photo
+	mas install 411643860 # DaisyDisk
 
 fi;
 
