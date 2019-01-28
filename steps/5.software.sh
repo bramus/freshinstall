@@ -405,6 +405,8 @@ brew cask install imageoptim
 brew cask install colorpicker-skalacolor
 
 brew cask install steam
+brew cask install epic-games
+
 brew cask install xact
 
 brew cask install postman
