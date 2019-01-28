@@ -401,6 +401,7 @@ brew cask install flixtools
 
 brew cask install the-archive-browser
 brew cask install imagealpha
+brew cask install imageoptim
 brew cask install colorpicker-skalacolor
 
 brew cask install steam
