@@ -484,6 +484,8 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict \
 # # Prevent Time Machine from prompting to use new hard drives as backup volume
 # defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 
+# Disable Mojave's Floating Screenshot Thumbnail
+defaults write com.apple.screencapture show-thumbnail -bool FALSE
 
 ###############################################################################
 # Dock, Dashboard, and hot corners                                            #
