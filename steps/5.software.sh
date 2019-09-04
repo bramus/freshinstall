@@ -285,8 +285,6 @@ source ~/.bash_profile
 
 # PHP Versions
 brew install php
-brew install php@7.2
-brew install php@7.1
 
 brew services start php
 brew link php
