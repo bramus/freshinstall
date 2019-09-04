@@ -273,6 +273,16 @@ echo "# Composer" >> ~/.bash_profile
 echo 'export PATH="$HOME/.composer/vendor/bin:$PATH"' >> ~/.bash_profile
 source ~/.bash_profile
 
+# Composer Autocomplete
+# brew install bash-completion
+curl -#L https://github.com/bramus/composer-autocomplete/tarball/master | tar -xzv --strip-components 1 --exclude={LICENSE,README.md}
+mv ./composer-autocomplete ~/composer-autocomplete
+echo "" >> ~/.bash_profile
+echo 'if [ -f "$HOME/composer-autocomplete" ] ; then' >> ~/.bash_profile
+echo '    . $HOME/composer-autocomplete' >> ~/.bash_profile
+echo "fi" >> ~/.bash_profile
+source ~/.bash_profile
+
 # PHP Versions
 brew install php
 brew install php@7.2
