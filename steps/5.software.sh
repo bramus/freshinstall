@@ -84,6 +84,11 @@ curl https://sdk.cloud.google.com | bash
 # Run this to configure: gcloud init
 pip3 install awscli --upgrade --user
 
+# Google Cloud Platform: Cloud SQL Proxy
+curl -o cloud_sql_proxy https://dl.google.com/cloudsql/cloud_sql_proxy.darwin.amd64
+chmod +x cloud_sql_proxy
+mv cloud_sql_proxy /usr/local/bin/cloud_sql_proxy
+
 
 ###############################################################################
 # NVM + Node Versions                                                         #
