@@ -439,6 +439,8 @@ brew cask install https://raw.githubusercontent.com/grettir/homebrew-cask/36b240
 brew cask install subsurface
 brew cask install quik
 
+brew cask install veracrypt
+
 ###############################################################################
 # Virtual Machines and stuff                                                  #
 ###############################################################################
