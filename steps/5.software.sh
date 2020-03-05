@@ -214,9 +214,9 @@ brew install youtube-dl
 ###############################################################################
 
 brew cask install viscosity
-curl -s -o ~/Downloads/uns_configs.zip -L https://usenetserver.com/vpn/software/uns_configs.zip > /dev/null
+curl -s -o ~/Downloads/ovpn_configs.zip -L https://privado.io/apps/ovpn_configs.zip > /dev/null
 
-echo -e "\n\033[93mYou'll need to import the Viscosity configs manually. I've downloadeded them to “~/Downloads/uns_configs.zip” for you …\033[0m\n"
+echo -e "\n\033[93mYou'll need to import the Viscosity configs manually. I've downloadeded them to “~/Downloads/ovpn_configs.zip” for you …\033[0m\n"
 
 
 ###############################################################################
