@@ -202,10 +202,10 @@ brew cask install safari-technology-preview
 # IMAGE & VIDEO PROCESSING                                                    #
 ###############################################################################
 
-brew install imagemagick --with-librsvg --with-opencl --with-webp
+brew install imagemagick
 
 brew install libvpx
-brew install ffmpeg --with-libass --with-libvorbis --with-libvpx --with-x265 --with-ffplay
+brew install ffmpeg
 brew install youtube-dl
 
 
@@ -225,7 +225,7 @@ echo -e "\n\033[93mYou'll need to import the Viscosity configs manually. I've do
 
 npm install -g react-native-cli
 
-brew install yarn --without-node
+brew install yarn
 echo "# Yarn" >> ~/.bash_profile
 echo 'export PATH="$HOME/.yarn/bin:$PATH"' >> ~/.bash_profile
 source ~/.bash_profile
