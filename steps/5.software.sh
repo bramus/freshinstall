@@ -174,6 +174,7 @@ if [ "$AppleID" != "" ]; then
 	mas install 824183456 # Affinity Photo
 	mas install 411643860 # DaisyDisk
 	mas install 1392471092 # NFC Tools for Desktop
+	mas install 1019371109 # Balance Lock
 
 fi;
 
