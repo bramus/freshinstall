@@ -175,6 +175,7 @@ if [ "$AppleID" != "" ]; then
 	mas install 411643860 # DaisyDisk
 	mas install 1392471092 # NFC Tools for Desktop
 	mas install 1019371109 # Balance Lock
+	mas install 1470584107 # Dato
 
 fi;
 
@@ -394,7 +395,6 @@ brew cask install macpass
 brew cask install caffeine
 # brew cask install nosleep
 
-brew cask install day-o
 brew cask install deltawalker
 brew cask install macpar-deluxe
 
