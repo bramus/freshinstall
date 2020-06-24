@@ -42,6 +42,10 @@ alias ipv4="ifconfig -a | grep -o 'inet \(\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+\)
 alias ipv6="ifconfig -a | grep -o 'inet6 \(\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+\)\|[a-fA-F0-9:]\+\)' | sed -e 's/inet6 //'"
 alias afconfig="ifconfig | pcregrep -M -o '^[^\t:]+:([^\n]|\n\t)*status: active'"
 
+# show/hide dekstop icons
+alias showdesktop="defaults write com.apple.finder CreateDesktop true && killall Finder"
+alias hidedesktop="defaults write com.apple.finder CreateDesktop false && killall Finder"
+
 # Flush Directory Service cache
 alias flushdns="dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
 
