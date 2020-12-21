@@ -52,6 +52,11 @@ defaults write com.apple.Terminal ShowLineMarks -int 0
 /usr/libexec/PlistBuddy -c "Delete 'Window Settings':Pro:VisualBell" ~/Library/Preferences/com.apple.Terminal.plist > /dev/null 2>&1
 /usr/libexec/PlistBuddy -c "Add 'Window Settings':Pro:VisualBell bool false" ~/Library/Preferences/com.apple.Terminal.plist
 
+# Disable VT100 Application Keypad Mode
+# @ref https://www.bram.us/?p=25837
+/usr/libexec/PlistBuddy -c "Delete 'Window Settings':Pro:StrictVTKeypad" ~/Library/Preferences/com.apple.Terminal.plist > /dev/null 2>&1
+/usr/libexec/PlistBuddy -c "Set 'Window Settings':Pro:StrictVTKeypad bool true" ~/Library/Preferences/com.apple.Terminal.plist
+
 ###############################################################################
 # NAMING THINGS                                                               #
 ###############################################################################
