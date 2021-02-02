@@ -46,6 +46,9 @@ alias afconfig="ifconfig | pcregrep -M -o '^[^\t:]+:([^\n]|\n\t)*status: active'
 alias showdesktop="defaults write com.apple.finder CreateDesktop true && killall Finder"
 alias hidedesktop="defaults write com.apple.finder CreateDesktop false && killall Finder"
 
+# Toggle Microphone
+alias togglemic="osascript -e 'set storedInputLevel to input volume of (get volume settings)' -e 'if storedInputLevel > 0 then' -e 'set volume input volume 0' -e 'display notification \"🔇 Muted\" with title \"Microphone Status\"' -e 'else' -e 'set volume input volume 100' -e 'display notification \"🔈 Unmuted\" with title \"Microphone Status\"' -e 'end if'"
+
 # Flush Directory Service cache
 alias flushdns="dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
 
