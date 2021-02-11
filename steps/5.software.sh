@@ -272,6 +272,17 @@ qlmanage -m
 # Composer + MySQL + Valet                                                    #
 ###############################################################################
 
+# PHP Versions
+brew install php
+
+brew services start php
+brew link php
+
+pecl install mcrypt-1.0.1 # mcrypt for PHP > 7.1
+pecl install grpc # needed for google firestore et al
+
+# @note: You might wanna "sudo brew services restart php" after this
+
 # Composer
 curl -s https://getcomposer.org/installer | php
 sudo mv composer.phar /usr/local/bin/composer
@@ -289,17 +300,6 @@ echo 'if [ -f "$HOME/composer-autocomplete" ] ; then' >> ~/.bash_profile
 echo '    . $HOME/composer-autocomplete' >> ~/.bash_profile
 echo "fi" >> ~/.bash_profile
 source ~/.bash_profile
-
-# PHP Versions
-brew install php
-
-brew services start php
-brew link php
-
-pecl install mcrypt-1.0.1 # mcrypt for PHP > 7.1
-pecl install grpc # needed for google firestore et al
-
-# @note: You might wanna "sudo brew services restart php" after this
 
 # MySQL
 brew install mysql
