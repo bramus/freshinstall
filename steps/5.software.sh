@@ -444,6 +444,8 @@ brew install --cask quik
 
 brew install --cask veracrypt
 
+brew install --cask elgato-stream-deck
+
 ###############################################################################
 # Virtual Machines and stuff                                                  #
 ###############################################################################
