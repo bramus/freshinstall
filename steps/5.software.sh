@@ -152,8 +152,7 @@ if [ "$AppleID" != "" ]; then
 	mas signin $AppleID
 
 	# Tweetbot + config
-	mas install 557168941 # Tweetbot
-	defaults write com.tapbots.TweetbotMac OpenURLsDirectly -bool true
+	mas install 1384080005 # Tweetbot
 
 	# iWork
 	mas install 409203825 # Numbers
