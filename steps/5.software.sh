@@ -17,7 +17,7 @@ fi;
 # Sublime Text                                                                #
 ###############################################################################
 
-brew cask install sublime-text
+brew install --cask sublime-text
 
 # Make sure directories exists
 if [ ! -d "~/Library/Application Support/Sublime Text 3" ]; then
@@ -193,11 +193,11 @@ cp ./resources/apps/tmux/.tmux.conf ~/.tmux.conf
 # BROWSERS                                                                    #
 ###############################################################################
 
-brew cask install firefox
-brew cask install firefoxdeveloperedition
-brew cask install google-chrome
-brew cask install google-chrome-canary
-brew cask install safari-technology-preview
+brew install --cask firefox
+brew install --cask firefoxdeveloperedition
+brew install --cask google-chrome
+brew install --cask google-chrome-canary
+brew install --cask safari-technology-preview
 
 
 ###############################################################################
@@ -215,7 +215,7 @@ brew install youtube-dl
 # VISCOSITY + CONFIGS                                                         #
 ###############################################################################
 
-brew cask install viscosity
+brew install --cask viscosity
 curl -s -o ~/Downloads/ovpn_configs.zip -L https://privado.io/apps/ovpn_configs.zip > /dev/null
 
 echo -e "\n\033[93mYou'll need to import the Viscosity configs manually. I've downloadeded them to “~/Downloads/ovpn_configs.zip” for you …\033[0m\n"
@@ -240,7 +240,7 @@ else
 	mkdir ~/Library/LaunchAgents
 fi;
 
-brew cask install react-native-debugger
+brew install --cask react-native-debugger
 
 brew install --HEAD libimobiledevice
 gem install xcpretty
@@ -251,16 +251,16 @@ gem install xcpretty
 ###############################################################################
 
 # https://github.com/sindresorhus/quick-look-plugins
-brew cask install qlcolorcode
-brew cask install qlstephen
-brew cask install qlmarkdown
-brew cask install quicklook-json
-brew cask install qlimagesize
-brew cask install suspicious-package
-brew cask install qlvideo
+brew install --cask qlcolorcode
+brew install --cask qlstephen
+brew install --cask qlmarkdown
+brew install --cask quicklook-json
+brew install --cask qlimagesize
+brew install --cask suspicious-package
+brew install --cask qlvideo
 
-brew cask install provisionql
-brew cask install quicklookapk
+brew install --cask provisionql
+brew install --cask quicklookapk
 
 # restart quicklook
 defaults write org.n8gray.QLColorCode extraHLFlags '-l'
@@ -333,7 +333,7 @@ valet install
 ###############################################################################
 
 # Install it
-brew cask install transmission
+brew install --cask transmission
 
 # Use `~/Downloads/_INCOMING` to store incomplete downloads
 defaults write org.m0k.transmission UseIncompleteDownloadFolder -bool true
@@ -389,69 +389,69 @@ brew install tig
 brew install speedtest-cli
 brew install jq
 
-brew cask install 1password
-brew cask install macpass
+brew install --cask 1password
+brew install --cask macpass
 
-brew cask install caffeine
-# brew cask install nosleep
+brew install --cask caffeine
+# brew install --cask nosleep
 
-brew cask install deltawalker
-brew cask install macpar-deluxe
+brew install --cask deltawalker
+brew install --cask macpar-deluxe
 
-brew cask install vlc
+brew install --cask vlc
 duti -s org.videolan.vlc public.avi all
-# brew cask install plex-media-server
+# brew install --cask plex-media-server
 
-brew cask install charles
-brew cask install ngrok
+brew install --cask charles
+brew install --cask ngrok
 
 # Already installed through mas
-# brew cask install slack
-brew cask install skype
-brew cask install whatsapp
+# brew install --cask slack
+brew install --cask skype
+brew install --cask whatsapp
 
-brew cask install tower
-brew cask install dropbox
-brew cask install transmit4
+brew install --cask tower
+brew install --cask dropbox
+brew install --cask transmit4
 
-brew cask install handbrake
-brew cask install spectacle
+brew install --cask handbrake
+brew install --cask spectacle
 
 brew install mkvtoolnix
-brew cask install makemkv
-brew cask install jubler
-brew cask install flixtools
+brew install --cask makemkv
+brew install --cask jubler
+brew install --cask flixtools
 
-brew cask install the-archive-browser
-brew cask install imagealpha
-brew cask install imageoptim
-brew cask install colorpicker-skalacolor
+brew install --cask the-archive-browser
+brew install --cask imagealpha
+brew install --cask imageoptim
+brew install --cask colorpicker-skalacolor
 
-brew cask install steam
-brew cask install epic-games
+brew install --cask steam
+brew install --cask epic-games
 
-brew cask install xact
+brew install --cask xact
 
-brew cask install postman
+brew install --cask postman
 
 # Locking down to this version (no serial for later version)
-brew cask install https://raw.githubusercontent.com/grettir/homebrew-cask/36b240eeec68e993a928395d3afdcef1e32eb592/Casks/screenflow.rb
-brew cask install kap
-brew cask install streamlabs-obs
-brew cask install keycastr
+brew install --cask https://raw.githubusercontent.com/grettir/homebrew-cask/36b240eeec68e993a928395d3afdcef1e32eb592/Casks/screenflow.rb
+brew install --cask kap
+brew install --cask streamlabs-obs
+brew install --cask keycastr
 
-brew cask install subsurface
-brew cask install quik
+brew install --cask subsurface
+brew install --cask quik
 
-brew cask install veracrypt
+brew install --cask veracrypt
 
 ###############################################################################
 # Virtual Machines and stuff                                                  #
 ###############################################################################
 
 # Locking down to this version (no serial for later version)
-brew cask install https://raw.githubusercontent.com/caskroom/homebrew-cask/a56c5894cc61d2bf182b7608e94128065af3e64f/Casks/vmware-fusion.rb
-brew cask install docker
+brew install --cask https://raw.githubusercontent.com/caskroom/homebrew-cask/a56c5894cc61d2bf182b7608e94128065af3e64f/Casks/vmware-fusion.rb
+brew install --cask docker
 
 ###############################################################################
 # Android Studio                                                              #
@@ -463,13 +463,13 @@ brew cask install docker
 touch ~/.android/repositories.cfg
 
 # Android Dev Tools
-brew cask install caskroom/versions/java8
+brew install --cask caskroom/versions/java8
 brew install ant
 brew install maven
 brew install gradle
 # brew install qt
-brew cask install android-sdk
-brew cask install android-ndk
+brew install --cask android-sdk
+brew install --cask android-ndk
 
 # SDK Components
 sdkmanager "platform-tools" "platforms;android-25" "extras;intel;Hardware_Accelerated_Execution_Manager" "build-tools;25.0.3" "system-images;android-25;google_apis_playstore;x86" "emulator"
@@ -477,7 +477,7 @@ sdkmanager "platform-tools" "platforms;android-25" "extras;intel;Hardware_Accele
 
 # HAXM
 if [ $(sw_vers -productVersion | cut -d. -f2) -lt 13 ]; then
-	brew cask install intel-haxm
+	brew install --cask intel-haxm
 else
 	echo -e "\n\033[93mCould not install intel-haxm on this OS. It's not supported (yet)\033[0m\n"
 fi;
@@ -504,7 +504,7 @@ echo 'export PATH="$ANDROID_HOME/emulator:$PATH"' >> ~/.bash_profile
 source ~/.bash_profile
 
 # Android Studio itself
-brew cask install android-studio
+brew install --cask android-studio
 
 # Configure Emulator
 # @ref https://gist.github.com/Tanapruk/b05e97d68a5969b4402650094145e913
