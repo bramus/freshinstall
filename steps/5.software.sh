@@ -445,6 +445,8 @@ brew install --cask veracrypt
 
 brew install --cask elgato-stream-deck
 
+brew install --cask little-snitch
+
 ###############################################################################
 # Virtual Machines and stuff                                                  #
 ###############################################################################
@@ -535,11 +537,6 @@ echo "- Additional Tools for Xcode"
 echo ""
 echo "    Download from https://developer.apple.com/download/more/"
 echo "    Mount the .dmg + install it from the Graphics subfolder"
-echo ""
-
-echo "- Little Snitch"
-echo ""
-echo "    Download from https://www.obdev.at/products/littlesnitch/index.html"
 echo ""
 
 echo "- NZBDrop"
