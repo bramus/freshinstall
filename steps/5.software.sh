@@ -94,7 +94,7 @@ mv cloud_sql_proxy /usr/local/bin/cloud_sql_proxy
 # NVM + Node Versions                                                         #
 ###############################################################################
 
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 source ~/.bash_profile
 
 nvm install 7
@@ -102,7 +102,7 @@ nvm install 9
 nvm use default 9
 
 NPM_USER=""
-echo -e "\nWhat's your npm username?"
+echo -e "\nWhat's your NPMJS username?"
 echo -ne "> \033[34m\a"
 read
 echo -e "\033[0m\033[1A\n"
