@@ -273,12 +273,14 @@ qlmanage -m
 
 # PHP Versions
 brew install php
+brew install php@7.4
 
-brew services start php
-brew link php
+brew services start php@7.4
+brew link php@7.4
 
-pecl install mcrypt-1.0.1 # mcrypt for PHP > 7.1
-pecl install grpc # needed for google firestore et al
+# pecl install mcrypt-1.0.1 # mcrypt for PHP > 7.1
+pecl install grpc
+pecl install protobuf
 
 # @note: You might wanna "sudo brew services restart php" after this
 
