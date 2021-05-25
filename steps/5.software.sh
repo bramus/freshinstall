@@ -433,8 +433,7 @@ brew install --cask xact
 
 brew install --cask postman
 
-# Locking down to this version (no serial for later version)
-brew install --cask https://raw.githubusercontent.com/grettir/homebrew-cask/36b240eeec68e993a928395d3afdcef1e32eb592/Casks/screenflow.rb
+brew install --cask screenflow
 brew install --cask kap
 brew install --cask streamlabs-obs
 brew install --cask keycastr
@@ -450,8 +449,7 @@ brew install --cask elgato-stream-deck
 # Virtual Machines and stuff                                                  #
 ###############################################################################
 
-# Locking down to this version (no serial for later version)
-brew install --cask https://raw.githubusercontent.com/caskroom/homebrew-cask/a56c5894cc61d2bf182b7608e94128065af3e64f/Casks/vmware-fusion.rb
+brew install --cask vmware-fusion
 brew install --cask docker
 
 ###############################################################################
