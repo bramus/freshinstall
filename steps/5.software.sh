@@ -464,16 +464,19 @@ brew install --cask docker
 touch ~/.android/repositories.cfg
 
 # Android Dev Tools
-brew install --cask caskroom/versions/java8
+brew install --cask caskroom/versions/java8 # Still Needed?
+# echo 'export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_202.jdk/Contents/Home"' >> ~/.bash_profile
+# echo 'export PATH=$JAVA_HOME/bin:$PATH' >> ~/.bash_profile
 brew install ant
 brew install maven
 brew install gradle
 # brew install qt
-brew install --cask android-sdk
-brew install --cask android-ndk
+brew install --cask android-sdk # Still needed?
+brew install --cask android-ndk # Still needed?
+brew install --cask android-platform-tools
 
 # SDK Components
-sdkmanager "platform-tools" "platforms;android-25" "extras;intel;Hardware_Accelerated_Execution_Manager" "build-tools;25.0.3" "system-images;android-25;google_apis_playstore;x86" "emulator"
+sdkmanager "platform-tools" "extras;intel;Hardware_Accelerated_Execution_Manager" "emulator" # What about "build-tools;28.0.3"?
 # echo y | …
 
 # HAXM
@@ -498,7 +501,7 @@ echo 'export PATH="$MAVEN_HOME/bin:$PATH"' >> ~/.bash_profile
 echo 'export PATH="$GRADLE_HOME/bin:$PATH"' >> ~/.bash_profile
 echo 'export PATH="$ANDROID_HOME/tools:$PATH"' >> ~/.bash_profile
 echo 'export PATH="$ANDROID_HOME/platform-tools:$PATH"' >> ~/.bash_profile
-echo 'export PATH="$ANDROID_HOME/build-tools/25.0.3:$PATH"' >> ~/.bash_profile
+# echo 'export PATH="$ANDROID_HOME/build-tools/25.0.3:$PATH"' >> ~/.bash_profile
 # @ref https://www.bram.us/2017/05/12/launching-the-android-emulator-from-the-command-line/
 echo 'export PATH="$ANDROID_HOME/emulator:$PATH"' >> ~/.bash_profile
 
@@ -507,24 +510,25 @@ source ~/.bash_profile
 # Android Studio itself
 brew install --cask android-studio
 
-# Configure Emulator
+# Configure Emulators
 # @ref https://gist.github.com/Tanapruk/b05e97d68a5969b4402650094145e913
 # @ref https://wiki.genexus.com/commwiki/servlet/wiki?14462,Creating+an+Android+Virtual+Device,
 # @ref https://gist.github.com/handstandsam/f20c2fd454d3e3948f428f62d73085df
-echo no | avdmanager create avd --name "Nexus_5X_API_25" --abi "google_apis_playstore/x86" --package "system-images;android-25;google_apis_playstore;x86" --device "Nexus 5X" --sdcard 128M
+# @ref https://gist.github.com/mrk-han/66ac1a724456cadf1c93f4218c6060ae
+sdkmanager --install "system-images;android-28;google_apis;x86"
+echo "no" | avdmanager --verbose create avd --force --name "pixel_9.0" --device "pixel" --package "system-images;android-28;google_apis;x86" --tag "google_apis" --abi "x86"
+echo "alias pixel_9.0='emulator @pixel_9.0 -no-boot-anim -netdelay none -no-snapshot -skin 1080x1920'" >> ~/.bash_profile
 
-echo "vm.heapSize=256
-hw.ramSize=1536
-disk.dataPartition.size=2048MB
-hw.gpu.enabled=yes
-hw.gpu.mode=auto
-hw.keyboard=yes
-showDeviceFrame=yes
-skin.dynamic=yes
-skin.name=nexus_5x
-skin.path=$HOME/Library/Android/sdk/skins/nexus_5x" >> ~/.android/avd/Nexus_5X_API_25.avd/config.ini
+sdkmanager --install "system-images;android-29;google_apis;x86"
+echo "no" | avdmanager --verbose create avd --force --name "pixel_10.0" --device "pixel" --package "system-images;android-29;google_apis;x86" --tag "google_apis" --abi "x86"
+echo "alias pixel_10.0='emulator @pixel_10.0 -no-boot-anim -netdelay none -no-snapshot -skin 1080x1920'" >> ~/.bash_profile
 
-# Start it via `emulator -avd Nexus_5X_API_25`
+sdkmanager --install "system-images;android-30;google_apis;x86"
+echo "no" | avdmanager --verbose create avd --force --name "pixel_11.0" --device "pixel" --package "system-images;android-30;google_apis;x86" --tag "google_apis" --abi "x86"
+echo "alias pixel_11.0='emulator @pixel_11.0 -no-boot-anim -netdelay none -no-snapshot -skin 1080x1920'" >> ~/.bash_profile
+
+# Link up HW keyboard
+for f in ~/.android/avd/*.avd/config.ini; do echo 'hw.keyboard=yes' >> "$f"; done
 
 ###############################################################################
 # ALL DONE NOW!                                                               #
