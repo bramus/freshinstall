@@ -35,7 +35,10 @@ fi;
 if [[ "$DOIT" == "yes" ]]; then
 	echo -e "\n\033[93mOK, I'll overwrite the files for you 😱\033[0m"
 	echo -ne "\n- Copying dotfiles to their destination: "
+	# Dependencies for .zshrc
 	curl -L git.io/antigen > ~/antigen.zsh
+	brew install zsh-completions
+	# The actual copying
 	cp -R ./resources/dotfiles/ ~/
 	echo -e "\033[32mDone\033[0m"
 
