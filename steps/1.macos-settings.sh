@@ -266,7 +266,7 @@ defaults write NSGlobalDomain com.apple.springing.delay -float 0.25
 
 # Force Click
 # @TOCHECK
-# defaults write NSGlobalDomain com.apple.trackpad.forceClick -bool false
+defaults write NSGlobalDomain com.apple.trackpad.forceClick -bool false
 
 # Increase sound quality for Bluetooth headphones/headsets
 # defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
@@ -481,15 +481,13 @@ echo -e "- Dock, Dashboard, and hot corners …"
 # Enable highlight hover effect for the grid view of a stack (Dock)
 # defaults write com.apple.dock mouse-over-hilite-stack -bool true
 
-# Don't authide dock
-defaults write com.apple.dock autohide -bool false
+# Autohide dock
+defaults write com.apple.dock autohide -bool true
 
 # Set the icon size of Dock items to 44 pixels
 defaults write com.apple.dock tilesize -int 44
-
-# Enable magnification
-defaults write com.apple.dock magnification -bool true
-defaults write com.apple.dock largesize -int 52
+# Don't magnify dock items
+defaults write com.apple.dock magnification -bool false
 
 # Minimize windows into their application’s icon
 defaults write com.apple.dock minimize-to-application -bool true
@@ -543,6 +541,7 @@ defaults write com.apple.dock mru-spaces -bool false
 # Top right screen corner → Start screen saver
 defaults write com.apple.dock wvous-tr-corner -int 5
 defaults write com.apple.dock wvous-tr-modifier -int 0
+defaults write com.apple.dock wvous-br-corner -int 0
 
 
 
@@ -600,6 +599,12 @@ defaults write com.apple.Safari ShowFavoritesBar -bool false
 # defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
 # defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
 
+# Do not send search queries to Apple
+defaults write com.apple.Safari UniversalSearchEnabled -bool false
+defaults write com.apple.Safari SuppressSearchSuggestions -bool true
+
+# Prevent Safari from opening ‘safe’ files automatically after downloading
+defaults write com.apple.Safari AutoOpenSafeDownloads -bool false
 
 # Enable continuous spellchecking
 defaults write com.apple.Safari WebContinuousSpellCheckingEnabled -bool true
@@ -745,6 +750,7 @@ defaults write com.apple.DiskUtility advanced-image-options -bool true
 # Auto-play videos when opened with QuickTime Player
 defaults write com.apple.QuickTimePlayerX MGPlayMovieOnOpen -bool true
 
+# @TODO: Music.app: don't notify when track changes
 
 
 ###############################################################################
