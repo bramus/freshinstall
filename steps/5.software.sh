@@ -159,14 +159,10 @@ echo -e "\033[0m\033[1A\n"
 
 if [ "$AppleID" != "" ]; then
 
-	# Workaround for `mas signin $AppleID` no longer working
-	# @ref https://github.com/mas-cli/mas/issues/164#issuecomment-860177723
-	if ! mas account >/dev/null; then
-		echo "Please open App Store and sign in using your Apple ID ...."
-		until mas account >/dev/null; do
-			sleep 5
-		done
-	fi
+	# Sign in
+	# No longer suppported: https://github.com/mas-cli/mas/issues/164
+	# But as we have already downloaded Xcode, we should already be logged into the store …
+	# mas signin $AppleID
 
 	# Xcode
 	# Already installed!
