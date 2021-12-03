@@ -53,6 +53,7 @@ if [ "$config_file_present" == "yes" ]; then
 	echo -e "\033[32mOK\033[0m"
 	# @TODO: Check for “Host *: UseKeychain yes”
 else
+	mkdir -p $SSH_DIR/control
 	cp ./resources/apps/ssh/config $SSH_DIR/config
 	echo -e "\033[93mCREATED\033[0m"
 fi;
