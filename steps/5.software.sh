@@ -29,6 +29,8 @@ brew install --cask 1password
 ###############################################################################
 
 brew install --cask visual-studio-code
+# @note: Settings + Plugins via https://code.visualstudio.com/docs/editor/settings-sync
+
 brew install --cask sublime-text
 
 # @TODO: rework to sublime v4
@@ -52,8 +54,6 @@ brew install --cask sublime-text
 # 
 # # Install Plugins and Config
 # cp -r ./resources/apps/sublime-text/* ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/ 2>/dev/null
-
-# @TODO: Install VSCode Plugins automatically
 
 # @TODO Mackup?!
 

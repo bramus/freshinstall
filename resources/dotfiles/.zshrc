@@ -31,6 +31,7 @@ antigen bundle unixorn/rvm-plugin
 # Syntax highlighting bundle.
 antigen bundle zsh-users/zsh-syntax-highlighting
 
+# Fuzzy History Search (1/2): Install Bundle
 antigen bundle zsh-users/zsh-history-substring-search ./zsh-history-substring-search.zsh
 
 # Load the theme.
@@ -46,7 +47,7 @@ antigen bundle lukechilds/zsh-nvm
 # Tell Antigen that you're done.
 antigen apply
 
-# bind UP and DOWN arrow keys for history search
+# Fuzzy History Search (2/2): Key Bindings
 zmodload zsh/terminfo
 bindkey "$terminfo[kcuu1]" history-substring-search-up
 bindkey "$terminfo[kcud1]" history-substring-search-down
