@@ -1,0 +1,17 @@
+Host *
+	AddKeysToAgent yes
+	UseKeychain yes
+
+	# Always use SSH2
+	Protocol 2
+
+	# SSH Multiplexing
+	ControlMaster auto
+	ControlPath ~/.ssh/control/%r@%h:%p
+	ControlPersist 1800
+
+	# Also this stuff
+	Compression yes
+	TCPKeepAlive yes
+	ServerAliveInterval 20
+	ServerAliveCountMax 10
