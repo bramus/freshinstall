@@ -27,6 +27,7 @@ antigen bundle command-not-found
 antigen bundle node
 antigen bundle npm
 antigen bundle unixorn/rvm-plugin
+antigen bundle dotenv
 
 # Syntax highlighting bundle.
 antigen bundle zsh-users/zsh-syntax-highlighting
