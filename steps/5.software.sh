@@ -419,18 +419,21 @@ defaults write org.m0k.transmission UploadLimit -int 5
 brew install jq
 
 brew install --cask vlc
+duti -s org.videolan.vlc public.movie all
 duti -s org.videolan.vlc public.avi all
+duti -s org.videolan.vlc public.mpeg-4 all
 
 brew install --cask ngrok
 
-# @TODO: teams
+brew install --cask microsoft-teams
+brew install --cask zoom
 
 brew install --cask tower
 brew install --cask dropbox
-brew install --cask transmit
+brew install --cask transmit # @note: Export Transmit Favorites Manually
 
 brew install --cask spectacle
-# @TODO: Spectacle Config, or is that handled via Mackup?
+# @TODO: Spectacle Config
 
 # brew install mkvtoolnix
 # brew install --cask makemkv
@@ -446,7 +449,7 @@ brew install --cask epic-games
 
 brew install --cask xact
 
-brew install --cask postman
+brew install --cask postman # @note: Workspace + Environments auto synced via account login
 
 brew install --cask screenflow
 brew install --cask kap
@@ -458,6 +461,9 @@ brew install --cask quik
 # brew install --cask elgato-stream-deck # @TODO: No longer exists?
 
 brew install --cask little-snitch
+
+brew install --cask krisp
+brew install --cask grammarly
 
 # @TODO: CodeRunner
 
