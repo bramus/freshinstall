@@ -90,5 +90,10 @@ function zipallfolders() {
 function unzipall() {
     find . -name '*.zip' -exec sh -c 'unzip -d "${1%.*}" "$1"' _ {} \;
 }
+function npmuo() {
+    if [ -f package.json ]; then
+        npm install $(npm outdated | cut -d' ' -f 1 | sed '1d' | xargs -I '$' echo '$@latest' | xargs echo)
+    fi
+}
 
 # Automated Additions Below:
