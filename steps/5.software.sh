@@ -111,6 +111,11 @@ curl -o cloud_sql_proxy https://dl.google.com/cloudsql/cloud_sql_proxy.darwin.am
 chmod +x cloud_sql_proxy
 mv cloud_sql_proxy /usr/local/bin/cloud_sql_proxy
 
+# gcloud-kms-scripts
+cd /usr/local/bin/
+curl -L https://github.com/bramus/gcloud-kms-scripts/tarball/master | tar -xzv --strip-components 1 --exclude={LICENSE,README.md}
+cd ~
+
 # AWS
 # pip3 install awscli --upgrade --user
 
