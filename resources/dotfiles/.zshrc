@@ -44,7 +44,6 @@ antigen theme half-life
 export NVM_COMPLETION=true
 export NVM_LAZY_LOAD=true
 antigen bundle lukechilds/zsh-nvm
-antigen bundle Sparragus/zsh-auto-nvm-use
 
 # Tell Antigen that you're done.
 antigen apply
