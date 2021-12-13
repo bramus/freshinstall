@@ -114,6 +114,9 @@ mv cloud_sql_proxy /usr/local/bin/cloud_sql_proxy
 # AWS
 # pip3 install awscli --upgrade --user
 
+# Terraform
+brew install terraform
+
 ###############################################################################
 # NPM                                                                         #
 ###############################################################################
