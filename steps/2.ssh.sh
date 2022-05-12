@@ -51,7 +51,6 @@ fi;
 
 if [ "$config_file_present" == "yes" ]; then
 	echo -e "\033[32mOK\033[0m"
-	# @TODO: Check for “Host *: UseKeychain yes”
 else
 	mkdir -p $SSH_DIR/control
 	cp ./resources/apps/ssh/config $SSH_DIR/config
@@ -64,7 +63,7 @@ fi;
 
 echo -ne "- Detecting SSH keys in $SSH_DIR/: "
 
-if [ "$(ls -a $SSH_DIR/*.pub 2>&1 | sort | grep "No such file or directory")" ]; then
+if [ -z "$(ssh-add -L)" ]; then
 	ssh_key_detected="no"
 else
 	ssh_key_detected="yes"
@@ -72,38 +71,42 @@ fi;
 
 if [ "$ssh_key_detected" == "yes" ]; then
 	echo -e "\033[32mOne or more detected\033[0m\n"
-	for file in "$(ls -a $SSH_DIR/*.pub)"; do
 
-		echo -e "  - \033[4m$file\033[0m\n"
+	if [ "$(ls $SSH_DIR/*.pub 2>&1 | grep "no matches found")" ]; then
 
-		FINGERPRINT="$(ssh-keygen -lf $file)"
-		FINGERPRINT_MD5="$(ssh-keygen -E md5 -lf $file)"
-		echo -e "    Fingerprint:              $FINGERPRINT"
-		echo -e "    Fingerprint (md5):        $FINGERPRINT_MD5"
+		for file in "$(ls -a $SSH_DIR/*.pub)"; do
 
-		echo -ne "    Status:                   "
-		if [ "$(ssh-add -l | grep "${file/.pub/}")" ]; then
-			echo -e "\033[32mLoaded in ssh-agent\033[0m\n"
-		else
-			echo -e "\033[31mNot loaded in ssh-agent\033[0m\n"
+			echo -e "  - \033[4m$file\033[0m\n"
 
-			echo -e "    Do you want me to add this key to ssh-agent? [Y/n]"
-			echo -ne "    > \033[94m\a"
-			read -r
-			echo -e "\033[0m\n"
+			FINGERPRINT="$(ssh-keygen -lf $file)"
+			FINGERPRINT_MD5="$(ssh-keygen -E md5 -lf $file)"
+			echo -e "    Fingerprint:              $FINGERPRINT"
+			echo -e "    Fingerprint (md5):        $FINGERPRINT_MD5"
 
-			if [[ $REPLY =~ ^[Yy]$ ]] || [[ -z $REPLY ]]; then
-				echo -ne "    Adding ssh-key “${file/.pub/}” to ssh-agent: "
-				ADDED="$(ssh-add -K "${file/.pub/}" 2>&1 | grep "Identity added")"
-				if [ "$ADDED" ]; then
-					echo -e "\033[32mOK\033[0m\n"
-				else
-					echo -e "\033[31mNOK\033[0m\n"
+			echo -ne "    Status:                   "
+			if [ "$(ssh-add -l | grep "${file/.pub/}")" ]; then
+				echo -e "\033[32mLoaded in ssh-agent\033[0m\n"
+			else
+				echo -e "\033[31mNot loaded in ssh-agent\033[0m\n"
+
+				echo -e "    Do you want me to add this key to ssh-agent? [Y/n]"
+				echo -ne "    > \033[94m\a"
+				read -r
+				echo -e "\033[0m\n"
+
+				if [[ $REPLY =~ ^[Yy]$ ]] || [[ -z $REPLY ]]; then
+					echo -ne "    Adding ssh-key “${file/.pub/}” to ssh-agent: "
+					ADDED="$(ssh-add -K "${file/.pub/}" 2>&1 | grep "Identity added")"
+					if [ "$ADDED" ]; then
+						echo -e "\033[32mOK\033[0m\n"
+					else
+						echo -e "\033[31mNOK\033[0m\n"
+					fi;
 				fi;
-			fi;
 
-		fi;
-	done
+			fi;
+		done
+	fi;
 else
 
 	echo -e "\033[93mCREATING\033[0m\n"
@@ -141,6 +144,6 @@ else
 
 fi;
 
-echo -e "\n\033[93mGreat, SSH is now configured! Don't forget to add your public SSH key to any services and servers you're using.\033[0m"
+echo -e "\033[93mGreat, SSH is now configured! Don't forget to add your public SSH key(s) – listed below – to any services and servers you're using.\033[0m\n"
 
-for file in "$(ls -a $SSH_DIR/*.pub)"; do cat $file; done;
+for key in "$(ssh-add -L)"; do echo -e "$key\n"; done;
