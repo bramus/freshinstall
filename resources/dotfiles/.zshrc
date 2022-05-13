@@ -11,6 +11,8 @@ if type brew &>/dev/null; then
 
     autoload -Uz compinit
     compinit
+    # Getting "zsh compinit: insecure directories, run compaudit for list." warnings?
+    # Fix with `compaudit | xargs chmod g-w`
 fi
 
 # Load antigen
