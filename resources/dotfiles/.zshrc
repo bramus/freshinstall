@@ -97,5 +97,20 @@ function npmuo() {
         npm install $(npm outdated | cut -d' ' -f 1 | sed '1d' | xargs -I '$' echo '$@latest' | xargs echo)
     fi
 }
+function gif() {
+    if test $# -lt 4; then 
+        echo "Usage: $0 input.(mp4|avi|webm|flv|...) output.gif horizontal_resolution fps"
+        return 0
+    fi
+
+    palette="$(mktemp /tmp/ffmpeg2gifXXXXXX.png)"
+
+    filters="fps=$4,scale=$3:-1:flags=lanczos"
+
+    ffmpeg -v warning -i "$1" -vf "$filters,palettegen" -y "$palette"
+    ffmpeg -v warning -i "$1" -i $palette -lavfi "$filters [x]; [x][1:v] paletteuse" -y "$2"
+
+    rm -f "$palette"
+}
 
 # Automated Additions Below:
