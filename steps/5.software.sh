@@ -175,9 +175,6 @@ if [ "$AppleID" != "" ]; then
 	# Already installed!
 	# mas install 497799835 # Xcode
 
-	# Tweetbot + config
-	mas install 1384080005 # Tweetbot
-
 	# iWork
 	mas install 409203825 # Numbers
 	mas install 409201541 # Pages
