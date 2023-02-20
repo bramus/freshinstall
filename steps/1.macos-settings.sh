@@ -54,6 +54,7 @@ defaults write com.apple.Terminal ShowLineMarks -int 0
 
 # Disable VT100 Application Keypad Mode
 # @ref https://www.bram.us/?p=25837
+# @TODO: Check if this is still working? Had the impression it was not ...
 /usr/libexec/PlistBuddy -c "Delete 'Window Settings':Pro:StrictVTKeypad" ~/Library/Preferences/com.apple.Terminal.plist > /dev/null 2>&1
 /usr/libexec/PlistBuddy -c "Set 'Window Settings':Pro:StrictVTKeypad bool true" ~/Library/Preferences/com.apple.Terminal.plist
 
@@ -132,7 +133,7 @@ sudo systemsetup -setcomputersleep 10 > /dev/null
 echo -e "- General UI/UX …"
 
 # Disable transparency in the menu bar and elsewhere on Yosemite
-defaults write com.apple.universalaccess reduceTransparency -bool true
+defaults write com.apple.universalaccess reduceTransparency -bool true # @TODO: This is not working?
 
 # Set Wallpaper
 # yes | (cp -i ./resources/wallpaper.jpg ~/wallpaper.jpg > /dev/null 2>&1)
