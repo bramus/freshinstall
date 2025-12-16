@@ -439,6 +439,8 @@ brew install --cask transmit # @note: Export Transmit Favorites Manually
 brew install --cask spectacle
 # @TODO: Spectacle Config
 
+brew install --cask monitorcontrol
+
 # brew install mkvtoolnix
 # brew install --cask makemkv
 # brew install --cask jubler
