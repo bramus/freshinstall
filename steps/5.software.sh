@@ -231,7 +231,7 @@ brew install imagemagick
 
 brew install libvpx
 brew install ffmpeg
-brew install youtube-dl
+brew install yt-dlp
 
 brew install --cask affinity
 
