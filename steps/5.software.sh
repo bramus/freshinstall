@@ -218,10 +218,8 @@ brew install --cask google-chrome
 brew install --cask firefox
 brew install --cask microsoft-edge
 
-brew tap homebrew/cask-versions
-brew install --cask google-chrome-canary
-brew install --cask firefox-developer-edition
-brew install --cask firefox-nightly
+brew install --cask google-chrome@canary
+brew install --cask firefox@nightly
 brew install --cask safari-technology-preview
 
 
