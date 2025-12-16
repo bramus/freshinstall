@@ -187,8 +187,8 @@ if [ "$AppleID" != "" ]; then
 	mas install 578078659 # ScreenSharingMenulet
 	mas install 803453959 # Slack
 	mas install 1006739057 # NepTunes (Last.fm Scrobbling)
-	mas install 824171161 # Affinity Designer
-	mas install 824183456 # Affinity Photo
+	# mas install 824171161 # Affinity Designer
+	# mas install 824183456 # Affinity Photo
 	mas install 411643860 # DaisyDisk
 	mas install 1019371109 # Balance Lock
 	mas install 1470584107 # Dato
@@ -234,6 +234,8 @@ brew install imagemagick
 brew install libvpx
 brew install ffmpeg
 brew install youtube-dl
+
+brew install --cask affinity
 
 
 ###############################################################################
