@@ -4,7 +4,8 @@
 
 # @ref https://docs.brew.sh/Shell-Completion#configuring-completions-in-zsh
 # $ brew install brew install zsh-completions
-# $ chmod -R go-w '$(brew --prefix)/share/zsh'
+# $ chmod go-w '/opt/homebrew/share'
+# $ chmod -R go-w '/opt/homebrew/share/zsh'
 if type brew &>/dev/null; then
     FPATH="$(brew --prefix)/share/zsh-completions:$FPATH"
     FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
