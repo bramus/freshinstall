@@ -436,8 +436,8 @@ brew install --cask tower
 brew install --cask dropbox
 brew install --cask transmit # @note: Export Transmit Favorites Manually
 
-brew install --cask spectacle
-# @TODO: Spectacle Config
+brew install --cask rectangle
+# @TODO: Config
 
 brew install --cask monitorcontrol
 
