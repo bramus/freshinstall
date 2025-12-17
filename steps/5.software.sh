@@ -31,31 +31,6 @@ brew install --cask 1password
 brew install --cask visual-studio-code
 # @note: Settings + Plugins via https://code.visualstudio.com/docs/editor/settings-sync
 
-brew install --cask sublime-text
-
-# Make sure directories exists
-if [ ! -d "~/Library/Application Support/Sublime Text" ]; then
-	mkdir ~/Library/Application\ Support/Sublime\ Text
-fi;
-if [ ! -d "~/Library/Application Support/Sublime Text/Installed Packages" ]; then
-	mkdir ~/Library/Application\ Support/Sublime\ Text\/Installed\ Packages
-fi;
-if [ ! -d "~/Library/Application Support/Sublime Text/Packages" ]; then
-	mkdir ~/Library/Application\ Support/Sublime\ Text/Packages
-fi;
-if [ ! -d "~/Library/Application Support/Sublime Text/Packages/User" ]; then
-	mkdir ~/Library/Application\ Support/Sublime\ Text/Packages/User
-fi;
-
-# Install Package Control
-# @ref https://github.com/joeyhoer/starter/blob/master/apps/sublime-text.sh
-cd ~/Library/Application\ Support/Sublime\ Text/Installed\ Packages && { curl -s -L -o "Package Control.sublime-package" https://packagecontrol.io/Package%20Control.sublime-package ; cd -; }
-
-# # @TODO: Install Sublime Plugins and Config
-# cp -r ./resources/apps/sublime-text/* ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/ 2>/dev/null
-
-# @TODO Mackup?!
-
 # Open files by default with VSCode
 #
 # Note that duti is preferred over the command below, as the latter requires a reboot
@@ -71,7 +46,7 @@ brew install duti
 duti -s com.microsoft.VSCode public.data all # for files like ~/.bash_profile
 duti -s com.microsoft.VSCode public.plain-text all
 duti -s com.microsoft.VSCode public.script all
-duti -s com.microsoft.VSCode net.daringfireball.markdown all
+# duti -s com.microsoft.VSCode net.daringfireball.markdown all
 
 
 ###############################################################################
@@ -79,20 +54,6 @@ duti -s com.microsoft.VSCode net.daringfireball.markdown all
 ###############################################################################
 
 cp ./resources/apps/vim/.vimrc ~/.vimrc
-
-###############################################################################
-# git-ftp (for older projects)                                                #
-###############################################################################
-
-# @TODO: Still needed?
-# sudo chown -R $(whoami):staff /Library/Python/2.7
-# curl https://bootstrap.pypa.io/get-pip.py | python
-# pip install gitpython
-# 
-# cp ./resources/apps/git-ftp/git-ftp.py ~/git-ftp.py
-# echo '# git-ftp' >> ~/.bash_profile
-# echo 'alias git-ftp="python ~/git-ftp.py"' >> ~/.bash_profile
-
 
 ###############################################################################
 # CLOUD COMPUTE SHIZZLE                                                       #
@@ -141,13 +102,6 @@ if [ "$NPM_USER" != "" ]; then
 fi;
 
 ###############################################################################
-# RVM                                                                         #
-###############################################################################
-
-curl -sSL https://get.rvm.io | bash -s -- --ignore-dotfiles
-# @NOTE: No need to adjust dotfiles, as an antigen plugin handles it
-
-###############################################################################
 # Mac App Store                                                               #
 ###############################################################################
 
@@ -187,8 +141,6 @@ if [ "$AppleID" != "" ]; then
 	mas install 578078659 # ScreenSharingMenulet
 	mas install 803453959 # Slack
 	mas install 1006739057 # NepTunes (Last.fm Scrobbling)
-	# mas install 824171161 # Affinity Designer
-	# mas install 824183456 # Affinity Photo
 	mas install 411643860 # DaisyDisk
 	mas install 1019371109 # Balance Lock
 	mas install 1470584107 # Dato
@@ -364,59 +316,6 @@ valet install
 # valet secure
 
 ###############################################################################
-# Transmission.app + Config                                                   #
-###############################################################################
-
-# Install it
-brew install --cask transmission
-
-# Use `~/Downloads/_INCOMING` to store incomplete downloads
-mkdir -p ${HOME}/Downloads/_INCOMING
-defaults write org.m0k.transmission UseIncompleteDownloadFolder -bool true
-defaults write org.m0k.transmission IncompleteDownloadFolder -string "${HOME}/Downloads/_INCOMING"
-
-# Use `~/Downloads/_COMPLETE` to store completed downloads
-mkdir -p ${HOME}/Downloads/_COMPLETE
-defaults write org.m0k.transmission DownloadLocationConstant -bool true
-defaults write org.m0k.transmission DownloadFolder -string "${HOME}/Downloads/_COMPLETE"
-
-# Autoload torrents from Downloads folder
-defaults write org.m0k.transmission AutoImportDirectory -string "${HOME}/Downloads"
-
-# Don’t prompt for confirmation before downloading
-defaults write org.m0k.transmission DownloadAsk -bool false
-defaults write org.m0k.transmission MagnetOpenAsk -bool false
-
-# Don’t prompt for confirmation before removing non-downloading active transfers
-defaults write org.m0k.transmission CheckRemoveDownloading -bool true
-
-# Trash original torrent files
-defaults write org.m0k.transmission DeleteOriginalTorrent -bool true
-
-# Hide the donate message
-defaults write org.m0k.transmission WarningDonate -bool false
-# Hide the legal disclaimer
-defaults write org.m0k.transmission WarningLegal -bool false
-
-# IP block list.
-# @ref https://giuliomac.wordpress.com/2014/02/19/best-blocklist-for-transmission/
-# @ref https://www.quora.com/What-is-the-best-Transmission-block-list-URL
-# @ref https://github.com/sayomelu/transmission-blocklist
-# @ref https://github.com/Naunter/BT_BlockLists
-defaults write org.m0k.transmission BlocklistNew -bool true
-# defaults write org.m0k.transmission BlocklistURL -string "http://list.iblocklist.com/?list=bt_level1&fileformat=p2p&archiveformat=gz"
-# defaults write org.m0k.transmission BlocklistURL -string "https://github.com/sayomelu/transmission-blocklist/raw/release/blocklist.gz"
-defaults write org.m0k.transmission BlocklistURL -string "https://github.com/Naunter/BT_BlockLists/releases/download/master/bt_blocklists.gz"
-defaults write org.m0k.transmission BlocklistAutoUpdate -bool true
-
-# Randomize port on launch
-# defaults write org.m0k.transmission RandomPort -bool true
-
-# Set UploadLimit
-defaults write org.m0k.transmission SpeedLimitUploadLimit -int 10
-defaults write org.m0k.transmission UploadLimit -int 5
-
-###############################################################################
 # OTHER BREW/CASK THINGS                                                      #
 ###############################################################################
 
@@ -468,7 +367,6 @@ brew install --cask quik
 
 brew install --cask little-snitch
 
-brew install --cask krisp
 brew install --cask grammarly
 
 # @TODO: CodeRunner
