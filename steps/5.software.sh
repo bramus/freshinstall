@@ -338,7 +338,7 @@ brew install --cask transmit # @note: Export Transmit Favorites Manually
 brew install --cask rectangle
 # @TODO: Config
 
-brew install --cask monitorcontrol
+brew install --cask betterdisplay
 
 # brew install mkvtoolnix
 # brew install --cask makemkv
