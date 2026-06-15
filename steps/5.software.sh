@@ -357,8 +357,11 @@ brew install --cask xact
 brew install --cask postman # @note: Workspace + Environments auto synced via account login
 
 brew install --cask screenflow
-brew install --cask kap
 brew install --cask streamlabs-obs
+
+brew tap MuntasirMalek/newkap
+brew trust --cask muntasirmalek/newkap/newkap
+brew install --cask newkap
 
 brew install --cask subsurface
 brew install --cask quik
