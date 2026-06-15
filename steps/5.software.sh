@@ -363,6 +363,9 @@ brew tap MuntasirMalek/newkap
 brew trust --cask muntasirmalek/newkap/newkap
 brew install --cask newkap
 
+brew tap aurorascharff/clicklight https://github.com/aurorascharff/ClickLight
+brew install --cask aurorascharff/clicklight/clicklight
+
 brew install --cask subsurface
 brew install --cask quik
 
