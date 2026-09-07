@@ -114,4 +114,26 @@ function gif() {
     rm -f "$palette"
 }
 
+# Kill all processes listening on a specific port
+killport() {
+    if [ -z "$1" ]; then
+        echo "Error: Please provide a port number. Usage: killport <port>"
+        return 1
+    fi
+
+    # Check if any process exists first
+    if ! lsof -t -i:"$1" > /dev/null; then
+        echo "No process found listening on port $1."
+        return 0
+    fi
+
+    # Pipe the PIDs line-by-line to handle multiple processes correctly in Zsh/Bash
+    lsof -t -i:"$1" | while read -r pid; do
+        if [ -n "$pid" ]; then
+            echo "Killing process $pid on port $1..."
+            kill -9 "$pid"
+        fi
+    done
+}
+
 # Automated Additions Below:
